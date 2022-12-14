@@ -14,9 +14,9 @@ import (
 	"log"
 	"os"
 	"strconv"
-
-	"github.com/creack/pty"
-	"github.com/kr/text/colwriter"
+	
+	"github.com/gozelle/pty"
+	"github.com/gozelle/text/colwriter"
 )
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
 	if width < 1 {
 		width = 80
 	}
-
+	
 	w := colwriter.NewWriter(os.Stdout, width, flag)
 	if len(args) > 0 {
 		for _, s := range args {
